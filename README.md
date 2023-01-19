@@ -1,5 +1,7 @@
 # Image Blending Tool
 
+<br>
+
 ## About 
 
 This study proposes an algorithmic method to seamlessly blend two photos together into a single, natural looking rendering.  Typically, this process is complete manually via a photo editing software such as photoshop and may take tens of minutes to hours to complete depending on the size and accuracy of the final image required.  With this method, we can achieve similar, if not superior results within a fraction of the time.
