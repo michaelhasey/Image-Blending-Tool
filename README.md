@@ -28,11 +28,9 @@ https://www.michaelhasey.com/gradient-domain-fusion
 
 <br>
 
-- [Background](#Background)
 - [Dataset](#Dataset)
-- [Model-Architecture](#Model-Architecture)
-- [Implementation-Details](#Implementation-Details)
-- [Command-Line-Arguments](#Command-Line-Arguments)
+- [Approach](#Approach)
+- [Implementation](#Implementation)
 - [Performance](#Performance)
 - [References](#References)
 - [Citation](#Citation)
@@ -90,7 +88,7 @@ In order to move forward, both the  target and source image must be split into t
 
 An image can be described as a series of x-y gradients, or relationships between each one of its individual pixels and their surrounding pixel neighbours in the x and y direction.  As each image pixel can be represented by a number, its relationship to its neighbour can be described by the difference between their pixel values. For example, the gradient between a red pixel with value of 10 and a neighbouring blue pixel with a value of 4 is 6, or 10 - 4 = 6.  This difference is called the derivative. By calculating and recording the derivatives of each pixel within the entire image, we can thus calculate the overall gradient of an image.  With an RGB colour image, we first need to separate the image into its 3 channels before calculating the gradient.  In the next step, we compare this gradient to the target or background image gradient in which it is being copied into and adjust each pixel in order for it to blend in colour and intensity.
 
-![](images/negative.png)
+![](images/neagtive.png)
 
 <br>
 
