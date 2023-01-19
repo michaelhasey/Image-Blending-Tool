@@ -1,7 +1,5 @@
 # Image Blending Tool
 
-<br>
-
 ## About 
 
 This study proposes an algorithmic method to seamlessly blend two photos together into a single, natural looking rendering.  Typically, this process is complete manually via a photo editing software such as photoshop and may take tens of minutes to hours to complete depending on the size and accuracy of the final image required.  With this method, we can achieve similar, if not superior results within a fraction of the time.
@@ -11,8 +9,6 @@ The aim of this study is to use image processing techniques to autonomously and 
 <br>
 
 ![](images/intro_banner.png)
-
-<br>
 
 ## Project Page
 
@@ -35,8 +31,6 @@ https://www.michaelhasey.com/gradient-domain-fusion
 - [References](#References)
 - [Citation](#Citation)
 
-<br>
-
 ## Dataset
 
 <br>
@@ -52,11 +46,7 @@ data/source_01.jpg
 data/target_01.jpg
 ```
 
-<br>
-
 ## Approach
-
-<br>
 
 ### Step 1: Choose a Target & Source Image
 
@@ -112,8 +102,6 @@ However, the Poisson Blending technique takes into account the colour of the tar
 
 ![](images/blend.png)
 
-<br>
-
 ## Implementation
 
 <br>
@@ -133,7 +121,6 @@ masking_code.py
 ```
 Part_1.2_Poisson_Blending.ipynb
 ```
-<br>
 
 ## Performance
 
@@ -144,8 +131,6 @@ The below source and target image pairs were all blended using the above describ
 <br>
 
 ![](images/results.png)
-
-<br>
 
 ## References
 
