@@ -42,9 +42,7 @@ data/target_01.jpg
 
 To begin, users must select a source image and a target image.  The source image will be the one in which content is copied from, and the target image is the one in which that content will be “pasted” into.  As the algorithm does not modify perspective, images with similar vantage points and perspectives work best.  Finally, similar matching backgrounds between the source and target image, for example the savannah grasslands shown here, helps to ensure a cohesive final image.
 
-![](images/blend_savannah.png)
-
-![](images/safari.gif)
+![](images/image_pair.png)
 
 ### Step 2: Mask Content to Blend
 
@@ -103,6 +101,8 @@ Part_1.2_Poisson_Blending.ipynb
 ## Performance
 
 The below source and target image pairs were all blended using the above described Poisson Blending Technique.
+
+![](images/safari.gif)
 
 ![](images/results.png)
 
