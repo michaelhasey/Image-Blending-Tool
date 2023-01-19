@@ -38,7 +38,7 @@ data/target_01.jpg
 
 ## Approach
 
-### Step 1: Choose a Target & Source Image
+### Step 1: Choose a Source & Target Image
 
 To begin, users must select a source image and a target image.  The source image will be the one in which content is copied from, and the target image is the one in which that content will be “pasted” into.  As the algorithm does not modify perspective, images with similar vantage points and perspectives work best.  Finally, similar matching backgrounds between the source and target image, for example the savannah grasslands shown here, helps to ensure a cohesive final image.
 
