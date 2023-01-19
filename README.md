@@ -6,9 +6,9 @@ This study proposes an algorithmic method to seamlessly blend two photos togethe
 
 The aim of this study is to use image processing techniques to autonomously and efficiently identify and cutout a source image,  copy it to a specific location of a target image, modify the source image so that the indices of pixels in the source image and target image correspond, and output a natural looking and seamlessly blended image.
 
-<br>
-
 ![](images/intro_banner.png)
+
+<br>
 
 ## Project Page
 
@@ -18,6 +18,8 @@ An expanded description of this model implimentation can be found on its project
 https://www.michaelhasey.com/gradient-domain-fusion
 ```
 
+<br>
+
 ## Table of Contents
 
 - [Dataset](#Dataset)
@@ -26,6 +28,8 @@ https://www.michaelhasey.com/gradient-domain-fusion
 - [Performance](#Performance)
 - [References](#References)
 - [Citation](#Citation)
+
+<br>
 
 ## Dataset
 
@@ -37,6 +41,8 @@ An example image pair has been included and can be found here:
 data/source_01.jpg
 data/target_01.jpg
 ```
+
+<br>
 
 ## Approach
 
@@ -84,6 +90,8 @@ However, the Poisson Blending technique takes into account the colour of the tar
 
 ![](images/blend.png)
 
+<br>
+
 ## Implementation
 
 To run the code and blend a target and source image together, follow these steps.
@@ -102,15 +110,21 @@ masking_code.py
 Part_1.2_Poisson_Blending.ipynb
 ```
 
+<br>
+
 ## Performance
 
 The below source and target image pairs were all blended using the above described Poisson Blending Technique.
 
 ![](images/results.png)
 
+<br>
+
 ## References
 
 This project was completed as part of Carnegie Melon University's Learning Based Image Synthesis course 16 726 taught by Jun-Yan Zhu in Spring of 2021.
+
+<br>
 
 ## Citation
 
