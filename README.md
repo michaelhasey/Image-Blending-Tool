@@ -14,15 +14,11 @@ The aim of this study is to use image processing techniques to autonomously and 
 
 An expanded description of this model implimentation can be found on its project page here:
 
-<br>
-
 ```
 https://www.michaelhasey.com/gradient-domain-fusion
 ```
 
 ## Table of Contents
-
-<br>
 
 - [Dataset](#Dataset)
 - [Approach](#Approach)
@@ -33,13 +29,9 @@ https://www.michaelhasey.com/gradient-domain-fusion
 
 ## Dataset
 
-<br>
-
 The dataset used includes a series of source and target image pairs in jpg format.  The source image represents the image that will be cut out, pasted and blended into the target image. 
 
 An example image pair has been included and can be found here: 
-
-<br>
 
 ```
 data/source_01.jpg
@@ -56,15 +48,11 @@ To begin, users must select a source image and a target image.  The source image
 
 ![](images/safari.gif)
 
-<br>
-
 ### Step 2: Mask Content to Blend
 
 A masking algorithm is used to define the source and target regions to blend. A graphic user interface allows the user to first select the content in the source image to copy, then change its size and orientation, and finally define where it will be pasted into the target image.  The resultant output is a newly defined source image with the source image content moved to the corresponding x-y orientation that matches its position in the target image as defined by the user, as well as a mask image which highlights the source image pixel area to be copied.
 
 ![](images/select_cut.png)
-
-<br>
 
 ### Step 3: Split Source & Target Images into Seperate RGB Channels
 
@@ -72,23 +60,17 @@ In order to move forward, both the  target and source image must be split into t
 
 ![](images/channels.png)
 
-<br>
-
 ### Step 4: Compute the Source Image X & Y Gradients
 
 An image can be described as a series of x-y gradients, or relationships between each one of its individual pixels and their surrounding pixel neighbours in the x and y direction.  As each image pixel can be represented by a number, its relationship to its neighbour can be described by the difference between their pixel values. For example, the gradient between a red pixel with value of 10 and a neighbouring blue pixel with a value of 4 is 6, or 10 - 4 = 6.  This difference is called the derivative. By calculating and recording the derivatives of each pixel within the entire image, we can thus calculate the overall gradient of an image.  With an RGB colour image, we first need to separate the image into its 3 channels before calculating the gradient.  In the next step, we compare this gradient to the target or background image gradient in which it is being copied into and adjust each pixel in order for it to blend in colour and intensity.
 
 ![](images/neagtive.png)
 
-<br>
-
 ### Step 5: Store the X & Y Gradients in Two Matrices
 
 Two matrices must be created in order to store numerical image gradients as well as their corresponding x,y positions within the image.  This is also done so the original image can be recovered or rebuilt from this information.  The first matrix is a sparse matrix where each line represents an individual pixel and its relationship to a single one of its 4 neighbours.  Thus, the number of rows is equal to 4X the number of pixels in the source image being copied.  The number of columns is equal to the number of pixels in the source image being copied.  The second matrix is a 1 dimensional array that represents the known derivative or difference between a single pixel and one of its four neighbours.  Hence the number of elements in this1d array is equal to 4X the number of source image pixels being copied. We can combine these two matrices together with a linear solver in order to recover the original image.
 
 ![](images/matrix.png)
-
-<br>
 
 ### Step 6: Blend Source Image into Target Image Using the Poisson Blending Technique
 
@@ -103,8 +85,6 @@ However, the Poisson Blending technique takes into account the colour of the tar
 ![](images/blend.png)
 
 ## Implementation
-
-<br>
 
 To run the code and blend a target and source image together, follow these steps.
 
@@ -124,23 +104,15 @@ Part_1.2_Poisson_Blending.ipynb
 
 ## Performance
 
-<br>
-
 The below source and target image pairs were all blended using the above described Poisson Blending Technique.
-
-<br>
 
 ![](images/results.png)
 
 ## References
 
-<br>
-
 This project was completed as part of Carnegie Melon University's Learning Based Image Synthesis course 16 726 taught by Jun-Yan Zhu in Spring of 2021.
 
 ## Citation
-
-<br>
 
 If you find this project useful in your research, please consider citing:
 
